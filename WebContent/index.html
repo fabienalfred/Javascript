@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function test() {
+			"use stict"
+			var val = document.getElementById("fieldId").value;
+			document.getElementById("resultId").value = val;
+			console.log();
+		}
+	</script>
+</head>
+<body>
+	<form>
+		Value : <input type="text" name="field" id="fieldId" /></br>
+		Resultat : <input type="text" name="result" id="resultId" \
+			readonly="readonly" /></br>
+		<input type="button" value="Click!" onclick="test();"></br>	
+	</form>
+</body>
+</html>

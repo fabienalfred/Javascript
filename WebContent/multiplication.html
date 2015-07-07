@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function multiply(){
+	var number = document.getElementById("nombre").value ;
+	if(isNaN(number)){
+		alert("Ce n'est pas un nombre !") ;
+// 		number = parseInt(number) ;
+		return ;
+	}
+	document.getElementById("show").innerHTML = "<h2>Table de multiplication de " + number + " :</h2>" ;
+	var affichage = document.getElementById("show") ;
+	for(var i=0 ; i<=12 ; i++){
+		affichage.innerHTML += number + " x " + i + " = " + number*i + "</br>" ; 
+	}
+}
+</script>
+</head>
+<body>
+	<input type="text" name="nombre" id="nombre" />
+	<input type="button" name="mult" id="mult" value="Multiplier" onclick="multiply()" />
+	<div id="show"></div>
+</body>
+</html>

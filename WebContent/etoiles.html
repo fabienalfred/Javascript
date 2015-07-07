@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function displayStars(){
+	"user strict"
+	document.getElementById("show").innerHTML = "" ;
+	var div = document.getElementById("show") ;
+	for(var i=1 ; i<=15 ; i++){
+		for(var j=1 ; j<=15 ; j++){
+			div.innerHTML += "*" ;
+		}
+		div.innerHTML += "</br>" ;
+	}
+}
+
+function displayPyramide(){
+	"user strict"
+	document.getElementById("show").innerHTML = "" ;
+	var div = document.getElementById("show") ;
+	for(var i=1 ; i<=15 ; i++){
+		for(var j=1 ; j<=(15-i)/2 ; j++){
+			div.innerHTML += "&nbsp" ;
+		}
+		for(var j=1 ; j<=i ; j++){
+			div.innerHTML += "*" ;
+		}
+		for(var j=1 ; j<=(15-i)/2 ; j++){
+			div.innerHTML += "&nbsp" ;
+		}
+		div.innerHTML += "</br>" ;
+	}
+}
+</script>
+</head>
+<body>
+	<input type="button" value="Etoiles" name="starButton" id="starButton" onclick="displayStars();" />
+	<input type="button" value="Pyramide" name="pyrButton" id="pyrButton" onclick="displayPyramide();" />
+	<div id="show"></div>
+</body>
+</html>
